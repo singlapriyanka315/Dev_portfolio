@@ -1054,16 +1054,6 @@ section {
   color: var(--blue-link);
 }
 
-.h4-tag {
-  margin-left: 8px;
-  padding: 2px 8px;
-  border-radius: 980px;
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--gray);
-  font-size: 0.72rem;
-  font-weight: 600;
-  vertical-align: 2px;
-}
 
 .job-role {
   margin-top: 6px;
@@ -2523,4 +2513,16 @@ section {
 @keyframes beat {
   56%, 64%, 72% { transform: scale(1); }
   60%, 68% { transform: scale(1.35); }
+}
+
+.badge-dev {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 2px 8px;
+  border-radius: 980px;
+  background: rgba(255, 177, 92, 0.16);
+  color: #ffb15c;
+  font-size: 0.7rem;
+  font-weight: 700;
+  vertical-align: 1px;
 }
