@@ -3,431 +3,471 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Priyanka Singla | Mobile Developer Portfolio</title>
+    <title>Priyanka Singla | Senior Software Engineer</title>
     <meta
       name="description"
-      content="Tech-oriented mobile developer portfolio for Priyanka Singla featuring shipped apps, architecture, release workflows, and product impact."
+      content="Priyanka Singla is a Senior Software Engineer at Galleri5 building web and mobile products with React, TypeScript, and Flutter, from a generative AI studio to apps with 500K+ downloads."
     />
+    <meta name="theme-color" content="#000000" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="noise"></div>
-    <div class="orb orb-one"></div>
-    <div class="orb orb-two"></div>
-
-    <div class="shell">
-      <header class="hero">
-        <nav class="nav">
-          <div class="nav-brand">
-            <a class="logo" href="#top">
-              <span class="logo-mark">PS</span>
-              <span>Priyanka Singla</span>
-            </a>
-            <span class="nav-badge">Mobile Developer Portfolio</span>
-          </div>
-          <div class="nav-links">
-            <a href="#stack">Stack</a>
-            <a href="#experience">Experience</a>
-            <a href="#builds">Builds</a>
-            <a href="#contact">Contact</a>
-          </div>
+    <!-- Global nav -->
+    <header class="gnav" id="gnav">
+      <div class="gnav-inner">
+        <a class="gnav-logo" href="#top" aria-label="Priyanka Singla, back to top">
+          <span class="gnav-mark">PS</span>
+        </a>
+        <nav class="gnav-links" id="gnav-links" aria-label="Sections">
+          <a href="#overview">Overview</a>
+          <a href="#work">Work</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
         </nav>
+        <a class="gnav-cta" href="./Priyanka_Singla_Resume.pdf" download>Resume</a>
+        <button class="gnav-toggle" id="gnav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="gnav-links">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
 
-        <div class="hero-layout">
-          <section class="hero-copy" id="top">
-            <p class="eyebrow">Mobile Developer Portfolio</p>
-            <h1>
-              I design
-              <span>mobile systems</span>
-              that feel sharp in the hand and solid in production.
-            </h1>
-            <p class="lead">
-              Mobile app developer with 4+ years of experience building creator platforms,
-              social flows, booking products, and release-ready app experiences.
-              I work across feature engineering, architecture, deep linking,
-              CI/CD, testing, code reviews, debugging, and shipping responsive
-              cross-platform apps with Android and iOS deployment awareness.
-            </p>
-
-            <div class="hero-actions">
-              <a class="button button-primary" href="#builds">View Selected Work</a>
-              <a class="button button-secondary" href="./Priyanka_Mobile-Dev.pdf" download>
-                Download Resume
-              </a>
-            </div>
-
-            <div class="signal-grid">
-              <article>
-                <span class="signal-label">Current</span>
-                <strong>Collective Artist Network</strong>
-                <p>Building creator-facing mobile experiences at scale.</p>
-              </article>
-              <article class="highlight-signal">
-                <span class="signal-label">Scale</span>
-                <strong>500K+ Users</strong>
-                <p>Built product experiences for a creator platform used at meaningful scale.</p>
-              </article>
-              <article>
-                <span class="signal-label">Focus</span>
-                <strong>Mobile + Product Engineering</strong>
-                <p>Architecture, API integrations, release quality, and iteration speed.</p>
-              </article>
-            </div>
-          </section>
-
-          <aside class="hero-stage" aria-label="Mobile developer showcase">
-            <div class="command-card">
-              <div class="command-top">
-                <span></span><span></span><span></span>
-              </div>
-              <p>$ developer.profile --mode live</p>
-              <ul>
-                <li>Languages: Dart / JavaScript / Java</li>
-                <li>Frameworks: Flutter / React Native</li>
-                <li>Architecture and State Management: BLoC / GetX / MVVM / Clean Architecture</li>
-                <li>Release: CI/CD / TestFlight / Firebase App Distribution</li>
-                <li>Engagement: Firebase Analytics / CleverTap / OneSignal</li>
-                <li>Integrations: Firebase / Branch.io / Google Maps</li>
-              </ul>
-            </div>
-
-            <div class="capability-card">
-              <p class="screen-tag">What I Do</p>
-              <ul>
-                <li>Design, develop, test, and maintain cross-platform mobile applications.</li>
-                <li>Translate UI/UX designs into high-quality, responsive mobile interfaces.</li>
-                <li>Integrate RESTful APIs, GraphQL APIs, and third-party libraries.</li>
-                <li>Ensure application performance, quality, and responsiveness.</li>
-                <li>Identify and fix bugs, performance bottlenecks, and memory leaks.</li>
-                <li>Participate in code reviews and support interns and junior developers through onboarding and guidance.</li>
-                <li>Collaborate with cross-functional teams to define, design, and ship new features.</li>
-                <li>Stay updated with the latest mobile development trends and best practices.</li>
-              </ul>
-            </div>
-
-            <div class="phone-cluster">
-              <div class="phone phone-main">
-                <div class="phone-bar"></div>
-                <div class="phone-screen">
-                  <p class="screen-tag">Project-Based Signals</p>
-                  <div class="preview-stack">
-                    <article class="preview-card active">
-                      <span>BigBang Social</span>
-                      <strong>Leaderboard Engine</strong>
-                      <p>+20% daily active logins</p>
-                    </article>
-                    <article class="preview-card">
-                      <span>Growth Automation</span>
-                      <strong>Instagram Auto DMs</strong>
-                      <p>50% faster creator setup</p>
-                    </article>
-                    <article class="preview-card">
-                      <span>Release Ops</span>
-                      <strong>Backend-driven UI</strong>
-                      <p>80% faster deployment cycles</p>
-                    </article>
-                  </div>
-                </div>
-              </div>
-
-              <div class="phone phone-side">
-                <div class="phone-bar"></div>
-                <div class="phone-screen compact">
-                  <p class="screen-tag">Project Impact</p>
-                  <div class="mini-metric">
-                    <span>Arxera</span>
-                    <strong>25%</strong>
-                    <p>lift in session duration on social feed work</p>
-                  </div>
-                  <div class="mini-metric">
-                    <span>BigBang Social</span>
-                    <strong>35%</strong>
-                    <p>fewer deep-link related bug reports</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </header>
-
-      <main>
-        <section class="stack-panel" id="stack">
-          <div class="panel-heading">
-            <p class="eyebrow">Engineering Stack</p>
-            <h2>Built like a mobile engineer, not a generic portfolio template.</h2>
+    <main id="top">
+      <!-- Hero -->
+      <section class="hero" id="hero">
+        <div class="hero-copy">
+          <p class="hero-eyebrow reveal">Senior Software Engineer · Web &amp; Mobile</p>
+          <h1 class="hero-title reveal" style="--d: 80ms">Priyanka Singla</h1>
+          <p class="hero-sub reveal" style="--d: 160ms">
+            <span class="gradient-text">Building products people love to use, on every screen.</span>
+          </p>
+          <div class="hero-ctas reveal" style="--d: 240ms">
+            <a class="btn btn-blue" href="#work">See my work</a>
+            <a class="link-arrow" href="mailto:singlapriyanka744@gmail.com?subject=Hello%20Priyanka" data-gmail>Email me</a>
+            <a class="link-arrow" href="./Priyanka_Singla_Resume.pdf" download>Resume</a>
           </div>
-
-          <div class="chip-row" role="tablist" aria-label="Portfolio categories">
-            <button class="chip active" type="button" data-tab="core">Core Mobile</button>
-            <button class="chip" type="button" data-tab="architecture">Architecture</button>
-            <button class="chip" type="button" data-tab="shipping">Shipping</button>
-          </div>
-
-          <div class="tab-wrap">
-            <div class="tab-panel active" data-panel="core">
-              <span>Languages: Dart / JavaScript / Java</span>
-              <span>Frameworks: Flutter / React Native</span>
-              <span>REST APIs</span>
-              <span>GraphQL APIs</span>
-              <span>Hive</span>
-              <span>SharedPreferences</span>
-            </div>
-            <div class="tab-panel" data-panel="architecture">
-              <span>State Management &amp; Architecture: BLoC / GetX / MVVM / Clean Architecture</span>
-              <span>OOPs</span>
-              <span>Backend-driven UI</span>
-              <span>Scalable Feature Design</span>
-            </div>
-            <div class="tab-panel" data-panel="shipping">
-              <span>Release &amp; Distribution: CI/CD / TestFlight / Firebase App Distribution</span>
-              <span>Analytics &amp; Engagement: Firebase Analytics / CleverTap / OneSignal</span>
-              <span>Integrations: Firebase / Branch / Google Maps</span>
-              <span>Git</span>
-              <span>GitHub</span>
-              <span>Jira</span>
-              <span>Agile</span>
-              <span>Scrum</span>
-              <span>Code Reviews</span>
-              <span>Debugging</span>
-            </div>
-          </div>
-        </section>
-
-        <section class="builds-panel" id="builds">
-          <div class="panel-heading">
-            <p class="eyebrow">Selected Builds</p>
-            <h2>Apps, features, and engineering work I can point to.</h2>
-          </div>
-
-          <div class="build-grid">
-            <article class="build-card build-large">
-              <p class="build-type">Creator Platform</p>
-              <h3>BigBang Social</h3>
-              <p>
-                A creator-focused social platform where users engage with
-                campaigns, rewards, growth tools, and monetization flows.
-                I worked on leaderboard systems, automation, deep linking, and
-                backend-driven UI delivery for a platform used by
-                <span class="inline-highlight">500K+ users</span>.
-              </p>
-              <div class="build-links">
-                <a href="https://play.google.com/store/apps/details?id=com.under25universe.bigbangsocial&hl=en_IN" target="_blank" rel="noreferrer">Android</a>
-                <a href="https://apps.apple.com/in/app/bigbang-social/id6450163388" target="_blank" rel="noreferrer">iOS</a>
-              </div>
-            </article>
-
-            <article class="build-card">
-              <p class="build-type">Consumer Service App</p>
-              <h3>LaLa Maids</h3>
-              <p>
-                A consumer service-booking app for finding and scheduling home
-                care support with smooth address selection, alerts, and slot
-                booking journeys.
-              </p>
-              <div class="build-links">
-                <a href="https://play.google.com/store/apps/details?id=com.lalmaids.customer_app&pcampaignid=web_share" target="_blank" rel="noreferrer">Android</a>
-                <a href="https://apps.apple.com/in/app/la-la-maids/id6468030105?platform=iphone" target="_blank" rel="noreferrer">iOS</a>
-              </div>
-            </article>
-
-            <article class="build-card">
-              <p class="build-type">Healthcare App</p>
-              <h3>TataMD</h3>
-              <p>
-                A healthcare app for TataMD, a health center in Bangalore,
-                where users can book online and offline appointments, schedule
-                lab tests, get appointment reminders, and access visit history,
-                reports, payments, and health records in one place.
-              </p>
-              <div class="build-links">
-                <a href="https://tatamd.com/" target="_blank" rel="noreferrer">Website</a>
-                <a href="https://apps.apple.com/in/app/tata-md/id1665888178" target="_blank" rel="noreferrer">iOS</a>
-                <a href="https://play.google.com/store/apps/details?id=com.tatamd.urbancare" target="_blank" rel="noreferrer">Android</a>
-              </div>
-            </article>
-
-            <a class="build-card" href="https://github.com/singlapriyanka315/Dating_app" target="_blank" rel="noreferrer">
-              <p class="build-type">Client Dating App</p>
-              <h3>Arxera</h3>
-              <p>
-                A client project envisioned as a blend of Instagram-style
-                content engagement and Tinder-like matchmaking, focused on
-                social discovery, profile interaction, and a modern consumer
-                mobile experience.
-              </p>
-              <span>View Repository</span>
-            </a>
-
-            <article class="build-card">
-              <p class="build-type">Provider Operations App</p>
-              <h3>LaLa Maids Pro</h3>
-              <p>
-                A provider-side operations app for service professionals,
-                focused on booking management, job visibility, and smoother
-                day-to-day workflow handling.
-              </p>
-              <div class="build-links">
-                <a href="https://play.google.com/store/apps/details?id=com.lalamaidsm.maid_app&hl=sv" target="_blank" rel="noreferrer">Android</a>
-                <a href="https://apps.apple.com/in/app/maids-pro/id6467877629?platform=iphone" target="_blank" rel="noreferrer">iOS</a>
-              </div>
-            </article>
-
-            <a class="build-card" href="https://geekyants.com/blog/sending-notifications-using-onesignal-sdk" target="_blank" rel="noreferrer">
-              <p class="build-type">Technical Article</p>
-              <h3>OneSignal Article</h3>
-              <p>Public write-up covering notification integration using the OneSignal SDK.</p>
-              <span>Read Article</span>
-            </a>
-
-            <a class="build-card" href="https://geekyants.com/blog/converting-flutter-screens-to-shareable-pdfs-a-complete-guide" target="_blank" rel="noreferrer">
-              <p class="build-type">Technical Article</p>
-              <h3>Flutter to Shareable PDFs</h3>
-              <p>Article covering how to convert Flutter screens into shareable PDFs with a practical implementation guide.</p>
-              <span>Read Article</span>
-            </a>
-          </div>
-        </section>
-
-        <section class="experience-panel" id="experience">
-          <div class="panel-heading">
-            <p class="eyebrow">Build Log</p>
-            <h2>Where I’ve shipped, scaled, and tightened mobile experiences.</h2>
-          </div>
-
-          <div class="filter-row">
-            <button class="filter active" type="button" data-filter="all">All</button>
-            <button class="filter" type="button" data-filter="creator">Creator</button>
-            <button class="filter" type="button" data-filter="product">Product Teams</button>
-          </div>
-
-          <div class="experience-grid">
-            <article class="experience-card" data-category="creator">
-              <div class="experience-head">
-                <div>
-                  <p class="role-tag">Mobile App Developer</p>
-                  <h3>Collective Artist Network</h3>
-                </div>
-                <p class="meta">Feb 2025 - Present</p>
-              </div>
-              <p class="product-line">BigBang Social • India’s first creator super-app</p>
-              <ul>
-                <li>Built a leaderboard engine from scratch that increased daily active logins by 20%.</li>
-                <li>Boosted creator retention by 30% with rewards, coupons, and participation milestones.</li>
-                <li>Shipped in-app Instagram auto-DM flows that cut setup time by 50%.</li>
-                <li>Implemented a centralized deep-link router, reducing navigation bug reports by 35%.</li>
-                <li>Built for a creator platform used by 5 lakh+ users, balancing product polish with scale-ready mobile delivery.</li>
-                <li>Used maintainable app structuring patterns including MVVM and Clean Architecture for evolving feature sets.</li>
-                <li>Collaborated with product, design, and engineering teams to define, build, test, and ship high-quality mobile features.</li>
-              </ul>
-            </article>
-
-            <article class="experience-card" data-category="product">
-              <div class="experience-head">
-                <div>
-                  <p class="role-tag">SDE 2</p>
-                  <h3>GeekyAnts</h3>
-                </div>
-                <p class="meta">May 2022 - Jan 2025</p>
-              </div>
-              <div class="company-blocks">
-                <section class="company-block">
-                  <p class="product-line">LaLa Maids • LaLa Maids Pro</p>
-                  <ul>
-                    <li>Delivered Google Maps-based address input to production in just two days.</li>
-                    <li>Integrated OneSignal notifications for booking alerts and service updates.</li>
-                    <li>Implemented Branch.io referral, booking, and payment sharing workflows.</li>
-                    <li>Built complex scheduling UI with date, weekday, and slot logic.</li>
-                    <li>Worked through release and testing workflows using CI/CD, App Tester, and TestFlight.</li>
-                    <li>Translated UI flows into responsive Flutter code while keeping performance, quality, and usability in focus.</li>
-                  </ul>
-                </section>
-                <section class="company-block">
-                  <p class="product-line">TataMD</p>
-                  <ul>
-                    <li>Contributed to production-ready healthcare mobile flows focused on usability, reliability, and smooth app interactions.</li>
-                    <li>Worked on scalable mobile features aligned with healthcare product requirements.</li>
-                    <li>Supported debugging, API-driven feature implementation, and reliable cross-functional delivery in a product setting.</li>
-                  </ul>
-                </section>
-                <section class="company-block">
-                  <p class="product-line">Arxera</p>
-                  <ul>
-                    <li>Built Instagram-style story upload and delete functionality.</li>
-                    <li>Created mixed photo and video feed experiences to drive participation.</li>
-                    <li>Implemented infinite image scrolling that contributed to a 25% increase in session duration.</li>
-                    <li>Worked on story interactions, mixed photo and video feeds, and infinite scrolling to improve responsiveness and increase session duration.</li>
-                  </ul>
-                </section>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="education-panel">
-          <div class="panel-heading">
-            <p class="eyebrow">Foundation</p>
-            <h2>Strong academic base with a builder mindset.</h2>
-          </div>
-          <div class="education-card">
-            <div>
-              <p class="role-tag">Education</p>
-              <h3>Chitkara University</h3>
-            </div>
-            <p>Bachelor of Technology in Computer Science</p>
-            <p>Rajpura, Punjab • CGPA 9.81</p>
-          </div>
-        </section>
-
-        <section class="metrics-panel">
-          <div class="panel-heading">
-            <p class="eyebrow">Impact Board</p>
-            <h2>Numbers from shipped features, not just skill lists.</h2>
-          </div>
-          <div class="metric-grid">
-            <article class="metric-card">
-              <p class="metric-value" data-count="20">0</p>
-              <p>Daily active login growth via gamified leaderboard systems.</p>
-            </article>
-            <article class="metric-card">
-              <p class="metric-value" data-count="30">0</p>
-              <p>Creator retention gain through rewards, coupons, and milestone mechanics.</p>
-            </article>
-            <article class="metric-card">
-              <p class="metric-value" data-count="50">0</p>
-              <p>Reduction in setup friction for in-app creator automation flows.</p>
-            </article>
-            <article class="metric-card">
-              <p class="metric-value" data-count="80">0</p>
-              <p>Faster UI release cycles with backend-driven asset delivery.</p>
-            </article>
-          </div>
-        </section>
-      </main>
-
-      <footer class="footer" id="contact">
-        <div class="footer-copy">
-          <p class="eyebrow">Open To Build</p>
-          <h2>Let’s create mobile products that look clean and ship hard.</h2>
-          <p>
-            If your team cares about product quality, architecture, and release
-            reliability, I’d love to talk.
+          <p class="hero-now reveal" style="--d: 320ms">
+            <span class="dot" aria-hidden="true"></span>
+            Currently at <a href="https://www.galleri5.com/" target="_blank" rel="noreferrer">Galleri5</a>, building
+            <a href="https://aistudio.galleri5.com/" target="_blank" rel="noreferrer">AI Studio</a>
           </p>
         </div>
-        <div class="contact-card">
-          <a href="mailto:singlapriyanka744@gmail.com">singlapriyanka744@gmail.com</a>
-          <a href="tel:+918360793357">+91 83607 93357</a>
-          <a href="https://www.linkedin.com/in/singlapriyanka315/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://github.com/singlapriyanka315" target="_blank" rel="noreferrer">GitHub</a>
+
+        <div class="hero-stage">
+          <div class="hero-glow" aria-hidden="true"></div>
+          <div class="devices hero-phone">
+            <div class="browser" aria-hidden="true">
+              <div class="browser-bar">
+                <span class="lights"><i></i><i></i><i></i></span>
+                <span class="browser-url">aistudio.galleri5.com</span>
+              </div>
+              <div class="browser-body">
+                <aside class="studio-side">
+                  <span class="studio-logo">G5</span>
+                  <i></i><i></i><i></i><i></i>
+                </aside>
+                <div class="studio-main">
+                  <div class="studio-head">
+                    <strong>Projects</strong>
+                    <span class="studio-btn">+ New video</span>
+                  </div>
+                  <div class="studio-grid">
+                    <div class="thumb t1" style="--i: 0"><span>Reel · 0:15</span></div>
+                    <div class="thumb t2" style="--i: 1"><span>Ad · 0:30</span></div>
+                    <div class="thumb t3" style="--i: 2"><span>Short · 0:45</span></div>
+                    <div class="thumb t4" style="--i: 3"><span>Film · 2:10</span></div>
+                    <div class="thumb t5" style="--i: 4"><span>UGC · 0:20</span></div>
+                    <div class="thumb t6" style="--i: 5"><span>Teaser · 1:05</span></div>
+                  </div>
+                  <div class="studio-prompt">
+                    <span class="typing">A slow dolly shot across a neon-lit street at night</span>
+                    <span class="studio-go">Generate</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <div class="iphone hero-iphone" aria-hidden="true">
+            <div class="iphone-btn iphone-btn-a"></div>
+            <div class="iphone-btn iphone-btn-b"></div>
+            <div class="iphone-btn iphone-btn-c"></div>
+            <div class="screen home-screen">
+              <div class="island"></div>
+              <div class="statusbar"><span>9:41</span><span class="sb-icons"><i></i><i></i><i></i></span></div>
+              <div class="home-widget">
+                <span>BigBang Social</span>
+                <strong>500K+</strong>
+                <span>downloads on Android &amp; iOS</span>
+              </div>
+              <div class="app-grid">
+                <div class="app" style="--i: 0"><div class="app-icon ic-bigbang">B</div><span>BigBang</span></div>
+                <div class="app" style="--i: 1"><div class="app-icon ic-tata">T</div><span>TataMD</span></div>
+                <div class="app" style="--i: 2"><div class="app-icon ic-lala">L</div><span>LaLa Maids</span></div>
+                <div class="app" style="--i: 3"><div class="app-icon ic-pro">P</div><span>Maids Pro</span></div>
+                <div class="app" style="--i: 4"><div class="app-icon ic-arx">A</div><span>Arxera</span></div>
+                <div class="app" style="--i: 5"><div class="app-icon ic-g5">G5</div><span>AI Studio</span></div>
+                <div class="app" style="--i: 6"><div class="app-icon ic-rn">R</div><span>React</span></div>
+                <div class="app" style="--i: 7"><div class="app-icon ic-ts">TS</div><span>TypeScript</span></div>
+              </div>
+              <div class="dock">
+                <div class="app-icon ic-dock1"></div>
+                <div class="app-icon ic-dock2"></div>
+                <div class="app-icon ic-dock3"></div>
+                <div class="app-icon ic-dock4"></div>
+              </div>
+            </div>
+          </div>
+          </div>
         </div>
-      </footer>
-    </div>
+      </section>
+
+      <!-- Scroll-lit statement -->
+      <section class="statement" id="overview">
+        <p class="eyebrow statement-eyebrow">About me</p>
+        <p class="statement-text" data-words>
+          I’m a senior software engineer who turns ambitious ideas into
+          <mark class="hl hl-blue">polished, production-ready products</mark>.
+          Right now I’m building <mark class="hl hl-violet">Galleri5 AI Studio</mark>,
+          where filmmakers and brands create with 200+ AI models.
+          Before that, I shipped <mark class="hl hl-pink">BigBang Social</mark>
+          to <mark class="hl hl-orange">500K+ downloads</mark>, along with healthcare
+          and booking apps people rely on every day. Across
+          <mark class="hl hl-blue">4+ years on web and mobile</mark>, I’ve owned
+          features end to end, from architecture to release.
+        </p>
+      </section>
+
+      <!-- Numbers -->
+      <section class="numbers">
+        <div class="numbers-head reveal">
+          <h2>Impact you can <span class="gradient-text">measure.</span></h2>
+          <p>Every number here came from a feature I built and shipped.</p>
+        </div>
+        <div class="numbers-grid">
+          <div class="num reveal" style="--d: 0ms">
+            <strong data-count="500" data-suffix="K+">0</strong>
+            <span>downloads of BigBang Social, the creator app I build</span>
+          </div>
+          <div class="num reveal" style="--d: 80ms">
+            <strong data-count="200" data-suffix="+">0</strong>
+            <span>AI video and image models unified in AI Studio</span>
+          </div>
+          <div class="num reveal" style="--d: 160ms">
+            <strong data-count="80" data-suffix="%">0</strong>
+            <span>faster deployments with a backend-driven asset model</span>
+          </div>
+          <div class="num reveal" style="--d: 240ms">
+            <strong data-count="60" data-suffix="%">0</strong>
+            <span>faster feature integration with a central deep-link router</span>
+          </div>
+          <div class="num reveal" style="--d: 320ms">
+            <strong data-count="50" data-suffix="%">0</strong>
+            <span>less setup time with in-app Instagram auto-DMs</span>
+          </div>
+          <div class="num reveal" style="--d: 400ms">
+            <strong data-count="20" data-suffix="%">0</strong>
+            <span>more daily active logins from a leaderboard I built</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work bento -->
+      <section class="work" id="work">
+        <div class="section-head reveal">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Products I’ve built, live on the web and in app stores.</h2>
+        </div>
+
+        <div class="bento">
+          <article class="tile tile-xl tile-studio reveal">
+            <div class="tile-copy">
+              <p class="tile-kicker"><span class="badge-new">Latest</span> AI Video Platform · Web</p>
+              <h3>Galleri5 AI Studio</h3>
+              <p class="tile-desc">A generative AI platform for filmmakers and brands. I built its visual workflow canvas, AI chat assistant, and model workspace, plus a Model Garden of 200+ video and image models behind one credits wallet, with live generation status.</p>
+              <ul class="chips">
+                <li>React</li><li>TypeScript</li><li>Vite</li><li>Tailwind CSS</li><li>Radix UI</li><li>Firebase</li>
+              </ul>
+              <div class="tile-links">
+                <a class="btn btn-blue btn-sm" href="https://aistudio.galleri5.com/" target="_blank" rel="noreferrer">Visit AI Studio</a>
+                <a class="link-arrow" href="https://www.galleri5.com/" target="_blank" rel="noreferrer">Galleri5</a>
+              </div>
+            </div>
+            <div class="tile-art art-studio" aria-hidden="true">
+              <div class="frame f1"></div>
+              <div class="frame f2"></div>
+              <div class="frame f3"></div>
+              <div class="timeline-bar"><i></i></div>
+            </div>
+            <div class="credits">
+              <p class="credits-label">Productions powered by Galleri5 AI Studio</p>
+              <div class="credits-row">
+                <div class="credit">
+                  <span class="credit-badge live">On air</span>
+                  <strong>Mahabharat: Ek Dharmayudh</strong>
+                  <span>World’s first fully AI-generated series · Star Plus &amp; JioHotstar</span>
+                </div>
+                <div class="credit">
+                  <span class="credit-badge imax">IMAX</span>
+                  <strong>Chiranjeevi Hanuman: The Eternal</strong>
+                  <span>AI feature film by Star Studios 18 · teaser on IMAX screens</span>
+                </div>
+                <div class="credit">
+                  <span class="credit-badge soon">In development</span>
+                  <strong>Krishna</strong>
+                  <span>Part of the Historyverse AI film slate</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="tile tile-bigbang reveal" style="--d: 60ms">
+            <p class="tile-kicker">Creator Platform · Mobile</p>
+            <h3>BigBang Social</h3>
+            <p class="tile-desc">India’s first creator super-app, with 500K+ downloads. Creators join brand campaigns with view-based payouts, track earnings live, and climb leaderboards for rewards. Growth tools like Instagram auto-DMs help them grow and monetize.</p>
+            <div class="tile-links">
+              <a class="link-arrow" href="https://apps.apple.com/in/app/bigbang-social/id6450163388" target="_blank" rel="noreferrer">iOS</a>
+              <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.under25universe.bigbangsocial&hl=en_IN" target="_blank" rel="noreferrer">Android</a>
+            </div>
+            <div class="art-orbit small" aria-hidden="true">
+              <span class="orbit-ring r1"></span>
+              <span class="orbit-ring r2"></span>
+              <span class="orbit-core">500K+</span>
+            </div>
+          </article>
+
+          <article class="tile tile-tata reveal" style="--d: 60ms">
+            <p class="tile-kicker">Healthcare · Mobile</p>
+            <h3>TataMD</h3>
+            <p class="tile-desc">A healthcare app with 10K+ downloads. Patients find doctors by specialty, book online or in-clinic consultations, schedule lab tests and scans, and raise support tickets in the app.</p>
+            <div class="tile-links">
+              <a class="link-arrow" href="https://apps.apple.com/in/app/tata-md/id1665888178" target="_blank" rel="noreferrer">iOS</a>
+              <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.tatamd.urbancare" target="_blank" rel="noreferrer">Android</a>
+              <a class="link-arrow" href="https://tatamd.com/" target="_blank" rel="noreferrer">Website</a>
+            </div>
+            <div class="pulse" aria-hidden="true"><svg viewBox="0 0 200 40"><path d="M0 20 H60 L70 6 L82 34 L94 12 L102 20 H200" /></svg></div>
+          </article>
+
+          <article class="tile tile-lala reveal" style="--d: 120ms">
+            <p class="tile-kicker">Service Booking · Mobile</p>
+            <h3>LaLa Maids</h3>
+            <p class="tile-desc">A customer app for booking trusted home cleaning and care. Users drop a pin on Google Maps, choose a date and time slot, and get push updates on every booking. Referral and booking links are shared through Branch.io.</p>
+            <div class="tile-links">
+              <a class="link-arrow" href="https://apps.apple.com/in/app/la-la-maids/id6468030105?platform=iphone" target="_blank" rel="noreferrer">iOS</a>
+              <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.lalmaids.customer_app&pcampaignid=web_share" target="_blank" rel="noreferrer">Android</a>
+            </div>
+            <div class="map" aria-hidden="true">
+              <span class="road r-h"></span>
+              <span class="road r-v"></span>
+              <span class="road r-d"></span>
+              <span class="ripple"></span>
+              <span class="pin"></span>
+              <span class="map-toast">✓ Booked · Tue 11:30</span>
+            </div>
+          </article>
+
+          <article class="tile tile-pro reveal" style="--d: 60ms">
+            <p class="tile-kicker">Provider Ops · Mobile</p>
+            <h3>LaLa Maids Pro</h3>
+            <p class="tile-desc">The companion app for LaLa Maids service professionals. Pros see upcoming jobs and booking details, get instant notifications for new assignments, and manage their daily schedule from one place.</p>
+            <div class="tile-links">
+              <a class="link-arrow" href="https://apps.apple.com/in/app/maids-pro/id6467877629?platform=iphone" target="_blank" rel="noreferrer">iOS</a>
+              <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.lalamaidsm.maid_app&hl=sv" target="_blank" rel="noreferrer">Android</a>
+            </div>
+            <div class="jobs" aria-hidden="true">
+              <div class="job-notif">
+                <span class="bell">🔔</span>
+                <div><strong>New job assigned</strong><span>Deep clean · 2 BHK · 10:30 AM</span></div>
+              </div>
+              <div class="job-row done"><i></i><span>Kitchen cleaning</span><em>9:00</em></div>
+              <div class="job-row"><i></i><span>Home care visit</span><em>2:00</em></div>
+            </div>
+          </article>
+
+          <article class="tile tile-arx reveal" style="--d: 120ms">
+            <p class="tile-kicker">Social Dating · Mobile</p>
+            <h3>Arxera</h3>
+            <p class="tile-desc">Instagram-style stories and feeds meet Tinder-like matching. +25% session time.</p>
+            <div class="tile-links">
+              <a class="link-arrow" href="https://github.com/singlapriyanka315/Dating_app" target="_blank" rel="noreferrer">View repository</a>
+            </div>
+            <div class="arx" aria-hidden="true">
+              <div class="stories">
+                <span class="story seen"><i class="sa1"></i></span>
+                <span class="story"><i class="sa2"></i></span>
+                <span class="story"><i class="sa3"></i></span>
+                <span class="story"><i class="sa4"></i></span>
+                <span class="story"><i class="sa5"></i></span>
+              </div>
+              <div class="swipe-deck">
+                <div class="profile p-back"></div>
+                <div class="profile p-front">
+                  <span class="like-stamp">LIKE</span>
+                  <span class="profile-name">Aanya, 24</span>
+                </div>
+                <div class="match"><span class="heart">💜</span>It’s a match!</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="experience" id="experience">
+        <div class="section-head reveal">
+          <p class="eyebrow">Experience</p>
+          <h2>Where I’ve shipped.</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="job reveal">
+            <div class="job-side">
+              <span class="job-dates">Feb 2025 – Present</span>
+              <span class="job-now">Current</span>
+            </div>
+            <div class="job-main">
+              <h3><a class="co-link" href="https://www.galleri5.com/" target="_blank" rel="noreferrer">Galleri5</a></h3>
+              <p class="job-role">Senior Software Engineer · <a href="https://www.collectiveartists.com/" target="_blank" rel="noreferrer">Collective Artists Network</a> · Bangalore</p>
+              <div class="job-projects">
+                <div>
+                  <h4><a href="https://aistudio.galleri5.com/" target="_blank" rel="noreferrer">Galleri5 AI Studio</a> <span class="h4-tag">Web</span></h4>
+                  <p class="proj-links"><a href="https://aistudio.galleri5.com/" target="_blank" rel="noreferrer">Website</a></p>
+                  <ul>
+                    <li>Developed a generative AI platform for filmmakers and brands, building its visual workflow canvas, AI chat assistant, and model workspace with React, Vite, Tailwind CSS, Radix UI, and Firebase.</li>
+                    <li>Integrated 200+ AI video and image models (Seedance, Kling, Wan) into a unified Model Garden with one credits wallet, replacing API polling with real-time job listeners for live generation status.</li>
+                    <li>The platform powers productions like <em>Mahabharat: Ek Dharmayudh</em> (Star Plus, JioHotstar) and <em>Chiranjeevi Hanuman: The Eternal</em>, with <em>Krishna</em> in development.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>BigBang Social <span class="h4-tag">Mobile</span></h4>
+                  <p class="proj-links"><a href="https://apps.apple.com/in/app/bigbang-social/id6450163388" target="_blank" rel="noreferrer">iOS</a><a href="https://play.google.com/store/apps/details?id=com.under25universe.bigbangsocial&hl=en_IN" target="_blank" rel="noreferrer">Android</a></p>
+                  <ul>
+                    <li>Built a leaderboard from scratch for a creator app with 500K+ downloads, increasing daily active logins by 20% and creator retention by 30% through rewards, coupons, and milestones.</li>
+                    <li>Developed an Auto DM feature for managing Instagram automated messages in the app, cutting setup time by nearly 50%.</li>
+                    <li>Contributed to building and submitting the Auto DM MVP for Meta app review to get approval for Instagram API access.</li>
+                    <li>Built in-app WebView flows so web pages open seamlessly inside the mobile app.</li>
+                    <li>Shipped a brand campaign module with content-view-based payouts, supporting creator monetization across a 100M+ creator ecosystem.</li>
+                    <li>Implemented a dynamic gauge-scale UI so creators can track campaign performance and earnings in real time.</li>
+                    <li>Designed a backend-driven asset model for dynamic UI, reducing deployment cycles by 80% with no app store releases.</li>
+                    <li>Created a centralized deep-link router that reduced navigation bug reports by 35% and cut integration time for new features by 60%.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="job reveal">
+            <div class="job-side">
+              <span class="job-dates">May 2022 – Jan 2025</span>
+            </div>
+            <div class="job-main">
+              <h3><a class="co-link" href="https://geekyants.com/" target="_blank" rel="noreferrer">GeekyAnts</a></h3>
+              <p class="job-role">Software Engineer II · Bangalore</p>
+              <div class="job-projects">
+                <div>
+                  <h4>LaLa Maids &amp; LaLa Maids Pro <span class="h4-tag">Mobile</span></h4>
+                  <p class="proj-links"><a href="https://apps.apple.com/in/app/la-la-maids/id6468030105?platform=iphone" target="_blank" rel="noreferrer">LaLa Maids iOS</a><a href="https://play.google.com/store/apps/details?id=com.lalmaids.customer_app&pcampaignid=web_share" target="_blank" rel="noreferrer">LaLa Maids Android</a><a href="https://apps.apple.com/in/app/maids-pro/id6467877629?platform=iphone" target="_blank" rel="noreferrer">Maids Pro iOS</a><a href="https://play.google.com/store/apps/details?id=com.lalamaidsm.maid_app&hl=sv" target="_blank" rel="noreferrer">Maids Pro Android</a></p>
+                  <ul>
+                    <li>Developed Google Maps pin-based address selection for precise location input and shipped it to production within 2 days.</li>
+                    <li>Integrated OneSignal push notifications for booking updates and Branch.io deep links for referral, booking, and payment sharing; published a <a href="https://geekyants.com/blog/sending-notifications-using-onesignal-sdk" target="_blank" rel="noreferrer">technical article</a> on the setup.</li>
+                    <li>Built a scheduling calendar with dynamic date selection, weekday filtering, and time-slot booking.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>TataMD <span class="h4-tag">Mobile</span></h4>
+                  <p class="proj-links"><a href="https://tatamd.com/" target="_blank" rel="noreferrer">Website</a><a href="https://apps.apple.com/in/app/tata-md/id1665888178" target="_blank" rel="noreferrer">iOS</a><a href="https://play.google.com/store/apps/details?id=com.tatamd.urbancare" target="_blank" rel="noreferrer">Android</a></p>
+                  <ul>
+                    <li>Built an end-to-end doctor appointment flow for a 10K+ download healthcare app, with doctor and specialty search, real-time availability, and online and in-clinic consultations.</li>
+                    <li>Implemented API-driven slot scheduling with a 15-day availability window, handling booking, cancellation, and tracking across upcoming, completed, and canceled states.</li>
+                    <li>Delivered lab and procedure booking for 10+ diagnostic services and an in-app support ticketing system.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="job reveal">
+            <div class="job-side">
+              <span class="job-dates">Education</span>
+            </div>
+            <div class="job-main">
+              <h3><a class="co-link" href="https://www.chitkara.edu.in/" target="_blank" rel="noreferrer">Chitkara University</a></h3>
+              <p class="job-role">B.Tech in Computer Science · Rajpura, Punjab</p>
+              <p class="cgpa"><span class="gradient-text">9.81</span> CGPA</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="skills" id="skills">
+        <div class="section-head reveal">
+          <p class="eyebrow">Skills</p>
+          <h2>Web and mobile, end to end.</h2>
+        </div>
+
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <span>React</span><span>TypeScript</span><span>Vite</span><span>Tailwind CSS</span><span>shadcn/ui</span><span>JavaScript</span><span>Flutter</span><span>React Native</span><span>Dart</span><span>HTML &amp; CSS</span><span>Java</span>
+            <span>React</span><span>TypeScript</span><span>Vite</span><span>Tailwind CSS</span><span>shadcn/ui</span><span>JavaScript</span><span>Flutter</span><span>React Native</span><span>Dart</span><span>HTML &amp; CSS</span><span>Java</span>
+          </div>
+        </div>
+        <div class="marquee reverse" aria-hidden="true">
+          <div class="marquee-track">
+            <span>Redux</span><span>Hasura</span><span>Radix UI</span><span>BLoC</span><span>GetX</span><span>MVVM</span><span>Clean Architecture</span><span>Firebase</span><span>Branch.io</span><span>Google Maps</span><span>OneSignal</span><span>AppsFlyer</span><span>CleverTap</span><span>GraphQL</span><span>TestFlight</span>
+            <span>Redux</span><span>Hasura</span><span>Radix UI</span><span>BLoC</span><span>GetX</span><span>MVVM</span><span>Clean Architecture</span><span>Firebase</span><span>Branch.io</span><span>Google Maps</span><span>OneSignal</span><span>AppsFlyer</span><span>CleverTap</span><span>GraphQL</span><span>TestFlight</span>
+          </div>
+        </div>
+
+        <div class="skill-grid">
+          <div class="skill-card reveal"><h3>Languages</h3><p>TypeScript, JavaScript, Dart, Java</p></div>
+          <div class="skill-card reveal" style="--d: 60ms"><h3>Web</h3><p>React, Vite, Tailwind CSS, Radix UI / shadcn, HTML, CSS</p></div>
+          <div class="skill-card reveal" style="--d: 120ms"><h3>Mobile</h3><p>Flutter, React Native, in-app WebView</p></div>
+          <div class="skill-card reveal"><h3>State &amp; Architecture</h3><p>Redux, BLoC, GetX, Clean Architecture, MVVM, OOP</p></div>
+          <div class="skill-card reveal" style="--d: 60ms"><h3>APIs &amp; Data</h3><p>REST, GraphQL, Hasura, Firebase, Hive, SharedPreferences</p></div>
+          <div class="skill-card reveal" style="--d: 120ms"><h3>Integrations</h3><p>Meta (Instagram) APIs, OneSignal, Branch.io, Google Maps</p></div>
+          <div class="skill-card reveal"><h3>Release</h3><p>CI/CD, TestFlight, Firebase App Distribution</p></div>
+          <div class="skill-card reveal" style="--d: 60ms"><h3>Analytics &amp; Attribution</h3><p>Firebase Analytics, CleverTap, AppsFlyer</p></div>
+          <div class="skill-card reveal" style="--d: 120ms"><h3>Tools &amp; Process</h3><p>Git, GitHub, Jira, Agile, code reviews</p></div>
+        </div>
+
+        <div class="writing reveal">
+          <p class="eyebrow">Writing</p>
+          <a class="article" href="https://geekyants.com/blog/sending-notifications-using-onesignal-sdk" target="_blank" rel="noreferrer">
+            <span>GeekyAnts Blog</span>
+            <strong>Sending notifications using the OneSignal SDK</strong>
+            <em>Read article</em>
+          </a>
+          <a class="article" href="https://geekyants.com/blog/converting-flutter-screens-to-shareable-pdfs-a-complete-guide" target="_blank" rel="noreferrer">
+            <span>GeekyAnts Blog</span>
+            <strong>Converting Flutter screens to shareable PDFs</strong>
+            <em>Read article</em>
+          </a>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact" id="contact">
+        <h2 class="reveal">Let’s build<br /><span class="gradient-text">something great.</span></h2>
+        <p class="reveal" style="--d: 80ms">Open to senior engineering roles across web and mobile.</p>
+        <a class="btn btn-blue btn-lg reveal" style="--d: 160ms" href="mailto:singlapriyanka744@gmail.com?subject=Hello%20Priyanka" data-gmail>singlapriyanka744@gmail.com</a>
+        <div class="contact-links reveal" style="--d: 240ms">
+          <a class="link-arrow" href="https://www.linkedin.com/in/singlapriyanka315/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="link-arrow" href="https://github.com/singlapriyanka315" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="link-arrow" href="tel:+918360793357">+91 83607 93357</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Designed and built by Priyanka Singla.</p>
+      <a href="#top">Back to top</a>
+    </footer>
 
     <script src="script.js"></script>
   </body>

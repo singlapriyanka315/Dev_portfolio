@@ -7,7 +7,7 @@ Static portfolio site ready for free deployment.
 - `index.html`
 - `styles.css`
 - `script.js`
-- `Priyanka_Mobile-Dev.pdf`
+- `Priyanka_Singla_Resume.pdf`
 
 ## Deploy On Netlify
 
