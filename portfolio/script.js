@@ -166,3 +166,86 @@ document.querySelectorAll("[data-gmail]").forEach((link) => {
     window.open(gmailCompose, "_blank", "noopener");
   });
 });
+
+/* ---------- Motion polish ---------- */
+
+/* Scroll progress bar */
+const progressBar = document.createElement("div");
+progressBar.className = "scroll-progress";
+progressBar.setAttribute("aria-hidden", "true");
+document.body.prepend(progressBar);
+
+const updateProgress = () => {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.setProperty("--sp", max > 0 ? (window.scrollY / max).toFixed(4) : 0);
+};
+window.addEventListener("scroll", updateProgress, { passive: true });
+window.addEventListener("resize", updateProgress);
+updateProgress();
+
+/* Auto-stagger reveal delays inside grids */
+document
+  .querySelectorAll(".bento, .skill-grid, .numbers-grid, .timeline, .writing")
+  .forEach((group) => {
+    [...group.querySelectorAll(":scope > .reveal")].forEach((el, i) => {
+      el.style.setProperty("--d", `${(i % 6) * 70}ms`);
+    });
+  });
+
+const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+if (finePointer && !reduceMotion) {
+  /* Soft glow that follows the cursor */
+  const glow = document.createElement("div");
+  glow.className = "cursor-glow";
+  glow.setAttribute("aria-hidden", "true");
+  document.body.prepend(glow);
+
+  let gx = -999, gy = -999, tx = -999, ty = -999;
+  window.addEventListener("pointermove", (e) => {
+    tx = e.clientX;
+    ty = e.clientY;
+  }, { passive: true });
+
+  const followGlow = () => {
+    gx += (tx - gx) * 0.12;
+    gy += (ty - gy) * 0.12;
+    glow.style.setProperty("--cx", `${gx}px`);
+    glow.style.setProperty("--cy", `${gy}px`);
+    requestAnimationFrame(followGlow);
+  };
+  requestAnimationFrame(followGlow);
+
+  /* Card spotlight + gentle 3D tilt */
+  document.querySelectorAll(".tile, .skill-card, .article").forEach((card) => {
+    const tilt = card.classList.contains("tile");
+    card.addEventListener("pointermove", (e) => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width;
+      const y = (e.clientY - r.top) / r.height;
+      card.style.setProperty("--mx", `${x * 100}%`);
+      card.style.setProperty("--my", `${y * 100}%`);
+      if (tilt) {
+        card.style.setProperty("--ry", `${(x - 0.5) * 4}deg`);
+        card.style.setProperty("--rx", `${(0.5 - y) * 4}deg`);
+      }
+    });
+    card.addEventListener("pointerleave", () => {
+      card.style.setProperty("--rx", "0deg");
+      card.style.setProperty("--ry", "0deg");
+    });
+  });
+
+  /* Magnetic primary buttons */
+  document.querySelectorAll(".btn").forEach((btn) => {
+    btn.addEventListener("pointermove", (e) => {
+      const r = btn.getBoundingClientRect();
+      const dx = (e.clientX - r.left - r.width / 2) * 0.15;
+      const dy = (e.clientY - r.top - r.height / 2) * 0.25;
+      btn.style.transform = `translate(${dx}px, ${dy - 2}px)`;
+    });
+    btn.addEventListener("pointerleave", () => {
+      btn.style.transform = "";
+    });
+  });
+}
