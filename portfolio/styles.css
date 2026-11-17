@@ -657,7 +657,7 @@ section {
 }
 
 .hl-blue { color: #4fc0ec; }
-.hl-violet { color: #b98aff; }
+.hl-violet { color: #ff6fae; }
 .hl-pink { color: #ff6fae; }
 .hl-orange { color: #ff6fae; }
 
@@ -2554,4 +2554,507 @@ section {
   font-size: 0.7rem;
   font-weight: 700;
   vertical-align: 1px;
+}
+
+/* ==========================================================================
+   Polish: tighter spacing, easier reading, more motion
+   ========================================================================== */
+
+:root {
+  --gray: #a1a1a6;
+  --section-y: clamp(48px, 6vw, 72px);
+  --grad-loop: linear-gradient(90deg, #2aa7df 0%, #ff2e88 50%, #2aa7df 100%);
+}
+
+body {
+  line-height: 1.65;
+}
+
+::selection {
+  background: rgba(255, 46, 136, 0.35);
+  color: #fff;
+}
+
+/* ---------- Spacing: remove dead space between sections ---------- */
+
+.hero {
+  padding: 92px 22px 36px;
+}
+
+.hero-stage {
+  margin-top: 28px;
+}
+
+.statement {
+  padding: 40px 22px 32px;
+}
+
+.numbers {
+  padding: 32px 22px var(--section-y);
+}
+
+.numbers-grid {
+  gap: 28px 32px;
+  margin-top: 32px;
+}
+
+.work,
+.experience {
+  padding: var(--section-y) 22px;
+}
+
+.skills {
+  padding: var(--section-y) 0;
+}
+
+.section-head {
+  margin-bottom: 32px;
+}
+
+.bento {
+  gap: 16px;
+}
+
+.tile {
+  min-height: 300px;
+}
+
+.tile-xl {
+  min-height: 380px;
+}
+
+.job {
+  gap: 32px;
+  padding: 28px 0;
+}
+
+.skill-grid {
+  margin-top: 32px;
+}
+
+.writing {
+  margin-top: 44px;
+}
+
+.contact {
+  padding: 88px 22px 96px;
+}
+
+/* ---------- Readability ---------- */
+
+.statement-text .w {
+  opacity: 0.42;
+}
+
+.tile-desc {
+  font-size: 0.97rem;
+  line-height: 1.6;
+}
+
+.num span {
+  color: #b8b8bd;
+  line-height: 1.5;
+}
+
+.job li {
+  color: #c7c7cc;
+  line-height: 1.65;
+}
+
+.skill-card p {
+  color: #ececf0;
+  line-height: 1.45;
+}
+
+.section-head h2,
+.numbers-head h2 {
+  text-wrap: balance;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+/* ---------- Scroll progress bar ---------- */
+
+.scroll-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cerulean-bright), var(--rose));
+  transform-origin: 0 50%;
+  transform: scaleX(var(--sp, 0));
+  box-shadow: 0 0 12px rgba(255, 46, 136, 0.6);
+  pointer-events: none;
+}
+
+/* ---------- Cursor glow (desktop) ---------- */
+
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 520px;
+  height: 520px;
+  margin: -260px 0 0 -260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(42, 167, 223, 0.10), rgba(255, 46, 136, 0.05) 40%, transparent 70%);
+  transform: translate3d(var(--cx, -999px), var(--cy, -999px), 0);
+  transition: opacity 400ms ease;
+  pointer-events: none;
+}
+
+main,
+.footer,
+.gnav {
+  position: relative;
+  z-index: 1;
+}
+
+.gnav {
+  position: fixed;
+  z-index: 100;
+}
+
+/* ---------- Living gradients ---------- */
+
+.gradient-text,
+.tile-xl h3 {
+  background-image: var(--grad-loop);
+  background-size: 200% auto;
+  animation: grad-flow 6s linear infinite;
+}
+
+@keyframes grad-flow {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.num strong {
+  background-image: linear-gradient(180deg, #fff 20%, var(--cerulean-bright) 140%);
+}
+
+.num:nth-child(even) strong {
+  background-image: linear-gradient(180deg, #fff 20%, var(--rose) 140%);
+}
+
+/* Hero ambient glow drifts slowly */
+.hero-glow {
+  animation: glow-drift 14s ease-in-out infinite alternate;
+}
+
+@keyframes glow-drift {
+  0% {
+    transform: translate(-50%, -30%) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(-46%, -34%) scale(1.08) rotate(8deg);
+  }
+  100% {
+    transform: translate(-54%, -28%) scale(0.96) rotate(-6deg);
+  }
+}
+
+/* ---------- Smoother, softer reveals ---------- */
+
+.reveal {
+  transform: translateY(28px) scale(0.985);
+  filter: blur(6px);
+  transition:
+    opacity 900ms var(--ease) var(--d, 0ms),
+    transform 900ms var(--ease) var(--d, 0ms),
+    filter 900ms var(--ease) var(--d, 0ms);
+}
+
+.reveal.in {
+  transform: none;
+  filter: none;
+}
+
+.tile.reveal {
+  transition:
+    opacity 900ms var(--ease) var(--d, 0ms),
+    transform 600ms var(--ease),
+    filter 900ms var(--ease) var(--d, 0ms),
+    box-shadow 500ms var(--ease),
+    border-color 500ms var(--ease);
+}
+
+/* Section headings: gradient underline draws in */
+.section-head h2::after,
+.numbers-head h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin-top: 14px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--cerulean-bright), var(--rose));
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 900ms var(--ease) 300ms;
+}
+
+.section-head.in h2::after,
+.numbers-head.in h2::after {
+  transform: scaleX(1);
+}
+
+/* ---------- Interactive cards: spotlight + tilt ---------- */
+
+.tile,
+.skill-card,
+.article {
+  --mx: 50%;
+  --my: 50%;
+}
+
+.tile::before,
+.skill-card::before,
+.article::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border-radius: inherit;
+  background: radial-gradient(360px circle at var(--mx) var(--my), rgba(42, 167, 223, 0.16), rgba(255, 46, 136, 0.08) 45%, transparent 70%);
+  opacity: 0;
+  transition: opacity 400ms ease;
+  pointer-events: none;
+}
+
+.tile:hover::before,
+.skill-card:hover::before,
+.article:hover::before {
+  opacity: 1;
+}
+
+.tile {
+  border: 1px solid #1f1f22;
+}
+
+.tile.in:hover {
+  transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(-4px);
+  border-color: rgba(42, 167, 223, 0.35);
+  box-shadow: 0 30px 60px -30px rgba(42, 167, 223, 0.35), 0 0 0 1px rgba(255, 46, 136, 0.08);
+}
+
+.skill-card,
+.article {
+  position: relative;
+  overflow: hidden;
+  transition: transform 400ms var(--ease), border-color 400ms ease, box-shadow 400ms ease, opacity 900ms var(--ease) var(--d, 0ms), filter 900ms var(--ease) var(--d, 0ms);
+}
+
+.skill-card.in:hover,
+.article:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 46, 136, 0.4);
+  box-shadow: 0 20px 40px -24px rgba(255, 46, 136, 0.45);
+}
+
+.skill-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-card h3::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cerulean-bright);
+  box-shadow: 0 0 10px var(--cerulean-bright);
+}
+
+.skill-card:nth-child(even) h3::before {
+  background: var(--rose);
+  box-shadow: 0 0 10px var(--rose);
+}
+
+/* Impact numbers lift on hover */
+.num {
+  padding: 18px 20px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  transition: border-color 400ms ease, background 400ms ease, transform 400ms var(--ease), opacity 900ms var(--ease) var(--d, 0ms), filter 900ms var(--ease) var(--d, 0ms);
+}
+
+.num.in:hover {
+  transform: translateY(-4px);
+  border-color: #222225;
+  background: #121214;
+}
+
+/* ---------- Buttons: glow + shine sweep ---------- */
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: background 200ms ease, transform 200ms ease, box-shadow 300ms ease;
+}
+
+.btn-blue:hover {
+  box-shadow: 0 10px 30px -8px rgba(42, 167, 223, 0.7);
+  transform: translateY(-2px);
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: skewX(-20deg);
+  transition: left 700ms var(--ease);
+}
+
+.btn:hover::after {
+  left: 130%;
+}
+
+.contact .btn-lg {
+  animation: soft-pulse 3s ease-in-out infinite;
+}
+
+@keyframes soft-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(42, 167, 223, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(42, 167, 223, 0);
+  }
+}
+
+/* ---------- Nav links: animated underline ---------- */
+
+.gnav-links a {
+  position: relative;
+}
+
+.gnav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: -4px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--cerulean-bright), var(--rose));
+  transition: left 300ms var(--ease), right 300ms var(--ease);
+}
+
+.gnav-links a:hover::after,
+.gnav-links a.active::after {
+  left: 0;
+  right: 0;
+}
+
+/* ---------- Skills marquee: pause and pop on hover ---------- */
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee span {
+  transition: transform 250ms var(--ease), border-color 250ms ease, color 250ms ease;
+}
+
+.marquee span:hover {
+  transform: translateY(-3px) scale(1.05);
+  border-color: var(--rose);
+}
+
+/* ---------- Experience: glowing timeline markers ---------- */
+
+.job {
+  position: relative;
+}
+
+.job::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--cerulean-bright);
+  box-shadow: 0 0 12px var(--cerulean-bright);
+}
+
+.job:nth-child(even)::before {
+  background: var(--rose);
+  box-shadow: 0 0 12px var(--rose);
+}
+
+.job-now {
+  animation: soft-pulse 2.6s ease-in-out infinite;
+}
+
+/* ---------- Mobile spacing ---------- */
+
+@media (max-width: 560px) {
+  .hero {
+    padding: 84px 18px 24px;
+  }
+
+  .statement {
+    padding: 32px 20px 24px;
+  }
+
+  .numbers-grid {
+    gap: 12px;
+  }
+
+  .num {
+    padding: 14px;
+  }
+
+  .experience,
+  .work,
+  .skills {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .contact {
+    padding: 72px 20px 80px;
+  }
+
+  .tile {
+    min-height: 0;
+  }
+}
+
+@media (hover: none) {
+  .cursor-glow {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    filter: none;
+  }
+
+  .gradient-text,
+  .tile-xl h3,
+  .hero-glow,
+  .contact .btn-lg,
+  .job-now {
+    animation: none !important;
+  }
+
+  .cursor-glow,
+  .scroll-progress {
+    display: none;
+  }
 }
